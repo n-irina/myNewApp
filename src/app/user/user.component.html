@@ -1,0 +1,13 @@
+<div class="card" syle="width: 100px">
+  <img [src]="user.photo" class="card-img-top" [alt]="user.name"/>
+  <div class="card-body">
+     <h1 class="card-title">Name: {{user.name}}<br> Firstname: {{user.firstname}}</h1>
+     @if(displayAge){
+      <p>Age: {{user.age}} ans</p>
+     }
+     <button (click)="showAge()">Afficher/Masquer l'âge</button><br>
+     <label>Quote:</label>
+     <input id="quote" type="text" class="form-control" [(ngModel)]="user.quote"><br>
+     <p>{{user.quote}}</p>
+  </div>
+</div>
